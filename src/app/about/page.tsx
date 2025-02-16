@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 // import Image from "next/image";
 // // import img1 from "../../resources/aboutImg.png";
 // import missionImg from "../../resources/mission.png";
@@ -92,7 +93,7 @@ export default function About() {
     <div className="flex flex-col items-center text-center px-4 py-8 space-y-8 bg-gray-100 md:px-8">
       {/* Title */}
       <h1 className="text-4xl md:text-5xl font-bold font-inria tracking-widest text-black underline decoration-[#DA9100] mb-4">
-        About Us
+        ABOUT US
       </h1>
 
       {/* Quote Section */}
@@ -132,7 +133,7 @@ export default function About() {
         <Image src={valuesImg} alt="Values" className="w-20 h-20 mb-4 object-contain" />
         <h2 className="text-2xl md:text-3xl font-bold text-[#DA9100]">VALUES</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full mt-4 ml-4">
+        <div className="grid grid-cols-1 md:grid-cols-1 gap-4 w-full mt-4 ml-4">
           <div>
             <h3 className="text-2xl  text-[#DA9100] text-left">1. Quality:</h3>
             <p className="text-black text-sm text-left">We are committed to delivering high-quality silage that meets the nutritional needs of livestock.</p>
