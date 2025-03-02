@@ -36,7 +36,7 @@ export default function RootLayout({
         href="https://wa.me/9538383331?text=Hello! I want to talk about Corn Silage"
         target="Hello! I want to talk about Corn Silage"
         rel="noopener noreferrer"
-        className="z-200 fixed bottom-4 right-4 bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg transition-all flex items-center gap-2"
+        className=" fixed bottom-4 right-4 bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg transition-all flex items-center gap-2 z-50"
       >
         <FaWhatsapp size={24} />
         <span className="hidden sm:block">Chat with us</span>
