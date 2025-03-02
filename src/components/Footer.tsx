@@ -54,10 +54,11 @@ const Footer = () => {
 
 
       <div className="container mx-auto text-center font-bold text-white mt-6">
-        <p>&copy; {new Date().getFullYear()} S.V Foods. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Cornrich Silage. All rights reserved.</p>
       </div>
     </footer>
   );
 };
 
 export default Footer;
+

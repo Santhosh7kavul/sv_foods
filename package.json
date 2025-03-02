@@ -12,10 +12,12 @@
     "@fontsource/inika": "^5.1.1",
     "@fontsource/inria-serif": "^5.1.1",
     "@fontsource/inter": "^5.1.1",
+    "framer-motion": "^12.4.7",
     "lucide-react": "^0.475.0",
     "next": "15.1.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-icons": "^5.5.0",
     "sv_foods": "file:",
     "swiper": "^11.2.3"
   },

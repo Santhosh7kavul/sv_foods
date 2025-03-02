@@ -1,19 +1,61 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+
+const media = [
+  'https://i.ibb.co/pvvw0MdS/1.webp',
+  '/videos/1.mp4',
+  
+  'https://i.ibb.co/7NRtkyNL/imgBg4.png',
+  'https://i.ibb.co/BHBDRJWG/2.webp', 
+  '/videos/2.mp4'
+];
+
+
 export default function Gallery() {
+ 
+  const [loadedMedia, setLoadedMedia] = useState<typeof media>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoadedMedia(media);
+    setLoading(false);
+  }, []);
+
+  if (loading) {
+    return <div className="text-center p-4">Loading media...</div>;
+  }
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 text-center p-6">
-      {/* Animated Camera Icon */}
-      <div className="relative w-20 h-20 mb-6">
-        <div className="absolute inset-0 animate-spin rounded-full border-t-4 border-purple-500 border-solid"></div>
-        <div className="absolute inset-0 animate-ping rounded-full bg-purple-500 opacity-30"></div>
+     
+     <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-5 gap-4 space-y-4">
+        {loadedMedia.map((src, index) => (
+          typeof src === 'string' && src.endsWith('.mp4') ? (
+            <motion.video
+              key={index}
+              src={src}
+              controls
+              className="w-full rounded-lg shadow-md"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ scale: 1.05 }}
+            />
+          ) : (
+            <motion.img
+              key={index}
+              src={src}
+              alt={`Masonry Item ${index + 1}`}
+              className="w-full rounded-lg shadow-md"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ scale: 1.05 }}
+            />
+          )
+        ))}
       </div>
-
-      {/* Title */}
-      <h1 className="text-3xl font-bold text-gray-800 mb-4">Gallery is Coming Soon!</h1>
-
-      {/* Description */}
-      <p className="text-lg text-gray-600 max-w-lg">
-        Our amazing collection of images is on its way. Stay tuned for a visual treat!
-      </p>
     </div>
   );
 }
