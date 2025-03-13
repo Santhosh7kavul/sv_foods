@@ -94,7 +94,7 @@ export default function About() {
       {/* Quote Section with styled blockquote */}
       <div className="w-full max-w-4xl mb-16 px-6">
         <blockquote className="relative p-8 bg-white rounded-lg shadow-lg">
-          <span className="absolute top-0 left-0 text-8xl text-[#DA9100] opacity-20">"</span>
+          {/* <span className="absolute top-0 left-0 text-8xl text-[#DA9100] opacity-20">"</span> */}
           <p className="text-xl md:text-2xl italic text-gray-800 pt-6 px-6">
             The greatness of a nation and its moral progress can be judged by the way its animals are treated.
           </p>
