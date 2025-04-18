@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://cornrichsilage.in/
+
+# Sitemaps
+Sitemap: https://cornrichsilage.in/sitemap.xml
